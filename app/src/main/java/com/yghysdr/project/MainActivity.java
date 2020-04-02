@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.tal.ndkbuild.HelloNdkBuild;
 import com.yghysdr.cmakelib.HelloCMake;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,5 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView viewContentOne = findViewById(R.id.viewContentOne);
         viewContentOne.setText(new HelloCMake().getNativeString());
+        TextView viewContentTwo = findViewById(R.id.viewContentTwo);
+        viewContentTwo.setText(new HelloNdkBuild().getNativeString());
     }
 }

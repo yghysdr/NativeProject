@@ -22,6 +22,13 @@ android {
         }
     }
 
+    externalNativeBuild {
+        ndkBuild {
+            //配置文件的地址
+            path "src/main/jni/Android.mk"
+        }
+    }
+
 }
 
 dependencies {
