@@ -1,2 +1,2 @@
-include ':app', ':cmake-library'
+include ':app', ':cmake-library', ':ndkbuild-lib'
 rootProject.name='NativeProject'
