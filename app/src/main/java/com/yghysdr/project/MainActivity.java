@@ -15,6 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView viewContentOne = findViewById(R.id.viewContentOne);
-        viewContentOne.setText(new HelloCMake().getString());
+        viewContentOne.setText(new HelloCMake().getNativeString());
     }
 }

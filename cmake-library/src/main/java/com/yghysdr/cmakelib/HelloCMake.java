@@ -6,8 +6,14 @@ package com.yghysdr.cmakelib;
  */
 public class HelloCMake {
 
+    static {
+        System.loadLibrary("native-lib");
+    }
+
     public String getString() {
         return "java return 123";
     }
+
+    public native String getNativeString();
 
 }
