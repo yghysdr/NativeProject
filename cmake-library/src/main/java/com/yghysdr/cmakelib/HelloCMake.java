@@ -7,7 +7,7 @@ package com.yghysdr.cmakelib;
 public class HelloCMake {
 
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("cmake-lib");
     }
 
     public String getString() {
