@@ -34,7 +34,7 @@ add_library(＃设置库的名称。 需要打包
         SHARED
         # 提供源文件的相对路径。可以是多个文件
         native-lib.cpp  libs/child-lib.cpp)
-
+        
 add_library(＃设置库的名称。 需要打包
         aaa-lib
         ＃设置库为共享库。
@@ -45,12 +45,12 @@ add_library(＃设置库的名称。 需要打包
 # 搜索预建库并将路径存储为变量
 find_library(
         ＃设置变量
-        log-lib
+        log-lib 
         # 搜索库的名称
         log)
 
-# 指定库CMake应该链接到您的目标库。可以链接多个库
-target_link_libraries(
+# 指定库CMake应该链接到您的目标库。可以链接多个库 
+target_link_libraries( 
         # 最终打包的库
         cmake-lib
         aaa-lib
@@ -93,3 +93,8 @@ LOCAL_SRC_FILES := $(JNI_SRC_PATH)/nn_sample.cpp \
 ### 编译方式
 - 通过ndk-build直接编译（进入到jni目录下，直接运行ndk-build）
 - 通过Android studio编译。
+
+
+### 参考
+- [google ndk-samples](https://github.com/android/ndk-samples)
+
