@@ -10,15 +10,16 @@ cmake_minimum_required(VERSION 3.4.1)
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
 
-# 一个add_library代表一个so库
 add_library( # Sets the name of the library.
         cmake-lib
 
         # Sets the library as a shared library.
         SHARED
 
-        # Provides a relative path to your source file(s). 库依赖的源文件 可以是多个
-        native-lib.cpp libs/child-lib.cpp )
+        # Provides a relative path to your source file(s).
+        native-lib.cpp)
+
+add_library(child-lib SHARED libs/child-lib.cpp)
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
@@ -26,7 +27,6 @@ add_library( # Sets the name of the library.
 # you want to add. CMake verifies that the library exists before
 # completing its build.
 
-# 依赖内置库
 find_library( # Sets the name of the path variable.
         log-lib
 
@@ -39,9 +39,9 @@ find_library( # Sets the name of the path variable.
 # build script, prebuilt third-party libraries, or system libraries.
 
 
-# 建立so库的关联关系
 target_link_libraries( # Specifies the target library.
         cmake-lib
+        child-lib
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib})
